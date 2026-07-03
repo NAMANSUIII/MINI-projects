@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="cu.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Currency Converter</h2>
+
+    <input type="number" id="rupees" placeholder="Enter Rupees">
+
+    <br><br>
+
+    <select id="currency">
+        <option value="85">USD - US Dollar</option>
+        <option value="98">EUR - Euro</option>
+        <option value="115">GBP - British Pound</option>
+        <option value="0.59">JPY - Japanese Yen</option>
+        <option value="23">AED - UAE Dirham</option>
+        <option value="62">CAD - Canadian Dollar</option>
+        <option value="56">AUD - Australian Dollar</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="convert()">Convert</button>
+
+    <h3 id="result"></h3>
+
+</div>
+
+<script src="cu.js"></script>
+
+</body>
+</html>

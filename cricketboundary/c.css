@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.stadium {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.ground-boundary {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #27ae60, #1e7e34);
+    border: 5px solid #fff; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+
+.inner-circle {
+    width: 220px;
+    height: 220px;
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pitch {
+    width: 30px;
+    height: 80px;
+    background-color: #f3e5ab; 
+    border: 1px solid #d4af37;
+    border-radius: 2px;
+}
+
+.ground-boundary.match-day {
+    background: radial-gradient(circle, #2ecc71, #27ae60);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.6);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
