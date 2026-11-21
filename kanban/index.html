@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Agile Kanban Board</h1>
+    <p>Manage your projects and track workflow</p>
+</header>
+
+<section class="dashboard">
+    <div class="stat">
+        <h3 id="totalTasks">0</h3>
+        <p>Total Tasks</p>
+    </div>
+    <div class="stat">
+        <h3 id="todoTasks">0</h3>
+        <p>To Do</p>
+    </div>
+    <div class="stat">
+        <h3 id="progressTasks">0</h3>
+        <p>In Progress</p>
+    </div>
+    <div class="stat">
+        <h3 id="completedTasks">0</h3>
+        <p>Completed</p>
+    </div>
+</section>
+
+<section class="toolbar">
+    <input type="text" id="searchInput"
+           placeholder="Search tasks...">
+
+    <button onclick="openTaskForm()">
+        + Add New Task
+    </button>
+</section>
+
+<section class="board">
+
+    <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="task-list" id="todo"></div>
+    </div>
+
+    <div class="column" data-status="progress">
+        <h2>In Progress</h2>
+        <div class="task-list" id="progress"></div>
+    </div>
+
+    <div class="column" data-status="review">
+        <h2>Review</h2>
+        <div class="task-list" id="review"></div>
+    </div>
+
+    <div class="column" data-status="completed">
+        <h2>Completed</h2>
+        <div class="task-list" id="completed"></div>
+    </div>
+
+</section>
+
+<div class="modal" id="taskModal">
+    <div class="modal-content">
+        <h2 id="modalTitle">Add New Task</h2>
+
+        <input type="text" id="taskTitle"
+               placeholder="Task title">
+
+        <textarea id="taskDescription"
+                  placeholder="Task description"></textarea>
+
+        <select id="taskPriority">
+            <option value="Low">Low Priority</option>
+            <option value="Medium">Medium Priority</option>
+            <option value="High">High Priority</option>
+        </select>
+
+        <select id="taskStatus">
+            <option value="todo">To Do</option>
+            <option value="progress">In Progress</option>
+            <option value="review">Review</option>
+            <option value="completed">Completed</option>
+        </select>
+
+        <div class="modal-buttons">
+            <button onclick="saveTask()">Save Task</button>
+            <button class="cancel"
+                    onclick="closeTaskForm()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

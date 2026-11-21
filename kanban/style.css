@@ -1,0 +1,209 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #20243a;
+    padding: 25px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: #3949ab;
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stat {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+.stat h3 {
+    font-size: 28px;
+    color: #3949ab;
+    margin-bottom: 8px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+input, textarea, select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#searchInput {
+    flex: 1;
+}
+
+button {
+    border: none;
+    background: #3949ab;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #283593;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 15px;
+    align-items: start;
+    overflow-x: auto;
+}
+
+.column {
+    background: #e9ecf5;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 350px;
+}
+
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.task-list {
+    min-height: 280px;
+}
+
+.task {
+    background: white;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px #00000010;
+    cursor: grab;
+}
+
+.task.dragging {
+    opacity: 0.4;
+}
+
+.task h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.task p {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.priority {
+    display: inline-block;
+    font-size: 11px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.High {
+    background: #ffe0e0;
+    color: #d32f2f;
+}
+
+.Medium {
+    background: #fff0cc;
+    color: #a66b00;
+}
+
+.Low {
+    background: #d9f5e3;
+    color: #168344;
+}
+
+.task-actions {
+    display: flex;
+    gap: 7px;
+}
+
+.task-actions button {
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.delete {
+    background: #e53935;
+}
+
+.delete:hover {
+    background: #b71c1c;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0009;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cancel {
+    background: #777;
+}
+
+@media(max-width: 700px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toolbar {
+        flex-direction: column;
+    }
+
+    .board {
+        grid-template-columns: repeat(4, 250px);
+    }
+}
