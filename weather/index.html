@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Weather Analytics</h1>
+        <p>Real-Time Meteorological Dashboard</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="cityInput"
+               placeholder="Enter city name...">
+        <button onclick="getWeather()">Search</button>
+    </div>
+
+    <p id="message"></p>
+
+    <section class="weather-main">
+
+        <div class="current-weather">
+            <h2 id="cityName">Search for a city</h2>
+
+            <img id="weatherIcon" src="" alt="Weather icon">
+
+            <h1 id="temperature">--°C</h1>
+
+            <h3 id="weatherDescription">Weather Condition</h3>
+
+            <p id="feelsLike">Feels Like: --°C</p>
+        </div>
+
+        <div class="weather-details">
+
+            <div class="detail">
+                <h3>Humidity</h3>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div class="detail">
+                <h3>Wind Speed</h3>
+                <p id="wind">-- m/s</p>
+            </div>
+
+            <div class="detail">
+                <h3>Pressure</h3>
+                <p id="pressure">-- hPa</p>
+            </div>
+
+            <div class="detail">
+                <h3>Visibility</h3>
+                <p id="visibility">-- km</p>
+            </div>
+
+            <div class="detail">
+                <h3>Sunrise</h3>
+                <p id="sunrise">--</p>
+            </div>
+
+            <div class="detail">
+                <h3>Sunset</h3>
+                <p id="sunset">--</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="forecast-section">
+        <h2>5-Day Weather Forecast</h2>
+        <div class="forecast" id="forecast"></div>
+    </section>
+
+    <footer>
+        <p>Weather data powered by OpenWeather API</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
